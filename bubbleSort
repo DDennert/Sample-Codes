@@ -1,0 +1,17 @@
+function bubbleSort(array) {
+  var count = 1; 
+  while (count !== 0){
+    count = 0; 
+    for (i=0; i< array.length; i++){
+      if (array[i] > array[i+1]){
+        var temp = array[i];
+        var temp2 = array[i+1];
+        array[i] = temp2;
+        array[i+1] = temp; 
+        count++; 
+      }
+    }
+  }
+  
+  return array;
+}
