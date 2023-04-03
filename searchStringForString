@@ -1,0 +1,11 @@
+function multiStringSearch(bigString, smallStrings) {
+  let ans = []; 
+  for (i=0; i < smallStrings.length; i++){
+    let word = smallStrings[i]; 
+    if (bigString.includes(word)){
+      ans.push(true);
+    } else {
+      ans.push(false);
+    }
+    } return ans; 
+  }
