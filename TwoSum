@@ -1,0 +1,18 @@
+function twoNumberSum(array, targetSum) {
+     array.sort(function(a, b){return a - b});
+     var left = 0;
+     var right = array.length; 
+     while (left < right) {
+       var current = array[left] + array[right]; 
+       if (current === targetSum){
+         return [array[left], array[right]];
+       } else  if (current < targetSum ) {
+         
+           left++; 
+         } else {
+           right --; 
+         }
+        } 
+       
+  return[];
+     }
