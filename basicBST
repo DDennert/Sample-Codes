@@ -1,0 +1,90 @@
+class BST {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+
+  insert(value) {
+    let node = this; 
+    while (node){
+      if (value < node.value){
+        if (node.left == null){
+          node.left = new BST(value); 
+          break
+        } else {
+          node = node.left;
+        }  
+      } else {
+        if(node.right == null){
+          node.right = new BST(value); 
+          break
+        } else {
+          node = node.right; 
+        }
+      }
+    }
+    return this;
+  }
+
+  contains(value) {
+    let node = this; 
+    while (node){
+        if (value < node.value){
+          node = node.left; 
+        } else if (value > node.value) {
+          node = node.right; 
+        } else {
+          return true; 
+        }
+      }
+    return false; 
+  }
+
+  
+  remove(value, parent = null) {
+    // THis is if removal happens and there are no children to that node. 
+    if (value < this.value){
+      if (this.left !== null) {
+        this.left.remove(value,this);
+      }
+    } else if (value > this.value){
+      if(this.right !== null){
+        this.right.remove(value,this); 
+      }
+    } else {
+      if (this.left !== null && this.right !== null){
+        this.value = this.right.getMin()
+        this.right.remove(this.value, this)
+      } else if (parent === null){
+        if (this.left !== null){
+          this.value = this.left.value; 
+          this.right = this.left.right; 
+          this.left = this.left.left; 
+        } else if (this.right !==null){
+          this.value = this.right.value; 
+          this.left = this.right.left; 
+          this.right = this.right.right; 
+        }  else {
+          //do nothing for single
+        }
+      } else if (parent.left === this){
+        parent.left = this.left !== null ? this.left : this.right; 
+      } else if (parent.right === this){
+        parent.right = this.left !== null ? this.left : this.right; 
+      }
+    }
+    
+    // Do not edit the return statement of this method.
+    return this;
+  }
+
+
+  getMin() { 
+    let node = this; 
+    while (node.left !== null){
+      node = node.left; 
+    }
+    return node.value; 
+           }
+}
