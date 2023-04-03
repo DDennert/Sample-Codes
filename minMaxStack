@@ -1,0 +1,34 @@
+class MinMaxStack {
+  constructor(){
+    this.array = [];
+    this.mins = [Infinity]; 
+    this.maxs = [-Infinity];
+  } 
+  
+  peek() {
+    return this.array[this.array.length-1]; 
+  }
+
+  pop() {
+    this.maxs.pop(); this.mins.pop(); 
+    return this.array.pop(); 
+  }
+
+  push(number) {
+    const newMin = Math.min(number, this.mins[this.mins.length-1]);
+    const newMax = Math.max(number, this.maxs[this.maxs.length-1]);
+    this.maxs.push(newMax);
+    this.mins.push(newMin); 
+    this.array.push(number);
+  }
+
+  getMin() {
+    const array = this.mins; 
+    return array[array.length-1];
+  }
+
+  getMax() {
+    const array = this.maxs; 
+    return array[array.length-1];
+  }
+}
