@@ -1,0 +1,15 @@
+function comboPalindromes(words) {
+ const check = new Set(); 
+  const ans = []; 
+  for (i = 0; i < words.length; i++){
+    let word = words[i]; 
+    const rev = word.split('').reverse().join(''); 
+    const ind = words.indexOf(rev, i+1); 
+    if (ind !== -1){
+      ans.push([word, rev]);
+      words.splice(ind,1);
+    }
+  }
+  // Write your code here.
+  return ans;
+}
