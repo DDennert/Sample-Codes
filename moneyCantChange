@@ -1,0 +1,16 @@
+function moneyCantChange(coins) {
+  coins.sort(function(a, b){return a - b});
+  if (!coins.length || coins[0] !== 1) {
+      return 1;  
+    } else {    
+    var tot = 0; 
+      for (i=0; i<coins.length; i++){
+        if (coins[i] > tot+1){
+          return tot+1; 
+        } else {
+          tot = tot + coins[i];
+        }
+      }  
+    }
+  return tot+1;
+}
