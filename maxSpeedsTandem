@@ -1,0 +1,28 @@
+function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
+  if (fastest){ // if they want max
+  redShirtSpeeds.sort(function(a, b){return b - a});
+  blueShirtSpeeds.sort(function(a, b){return a - b});
+  const half = Math.floor(redShirtSpeeds.length/2);
+  let tot = 0; 
+  if (redShirtSpeeds.length%2 === 1){ // if it is odd number of terms
+    for (i=0;i<half; i++){
+      tot = tot + redShirtSpeeds[i]; 
+      tot = tot + blueShirtSpeeds[i];
+    }
+    if (redShirtSpeeds[half+1] > blueShirtSpeeds[half+1]){
+      tot = tot + redShirtSpeeds[half+1]; 
+    } else {
+      tot = tot + blueShirtSpeeds[half+1]; 
+    }
+  } else { // if it is even number of terms
+    for (i=0;i<half; i++){
+      tot = tot + redShirtSpeeds[i]; 
+      tot = tot + blueShirtSpeeds[i];
+    }
+  }
+  
+  return tot;
+} else { // if they want min
+    
+} 
+}
