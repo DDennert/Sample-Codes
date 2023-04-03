@@ -1,0 +1,12 @@
+function caesarCipherEncryptor(string, key) {
+  let ans = [];
+  for(const letter of string){
+    ans.push(shiftLetter(letter, key % 26))
+  }
+  return ans.join('');
+}
+
+function shiftLetter(letter, key) {
+    const newL = letter.charCodeAt()+ key; 
+    return newL <= 122 ? String.fromCharCode(newL) : String.fromCharCode(96 + (newL % 122));
+}
