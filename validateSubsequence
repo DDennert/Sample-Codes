@@ -1,0 +1,14 @@
+function isValidSubsequence(array, sequence) {
+  var k = 0; 
+  const end = sequence.length; 
+  for (i=0; i < array.length; i++){
+    if (array[i] === sequence[k]){
+      if(k === end){
+        break; 
+      } else {
+        k++;         
+      }     
+    }
+  }
+  return k === end; 
+}
