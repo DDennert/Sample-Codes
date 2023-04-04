@@ -1,0 +1,10 @@
+function powerset(array) {
+  let ans = [[]];
+  if (array.length === 0){
+    return ans; 
+  }
+  let fin = array.pop();
+  let temp = powerset(array);
+  ans = temp.concat(temp.map(i => i.concat(fin))); 
+  return ans; 
+}
