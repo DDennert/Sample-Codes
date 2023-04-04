@@ -1,0 +1,16 @@
+class LinkedList {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+function removeDuplicatesFromLinkedList(linkedList) {
+  let ans = linkedList; 
+  while (ans.next){
+    if (ans.value === ans.next.value){
+      ans.next = ans.next.next; 
+    } else ans = ans.next; 
+  }
+  return linkedList;
+}
