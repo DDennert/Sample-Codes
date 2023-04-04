@@ -1,0 +1,15 @@
+function binarySearch(array, target) {
+  let l = 0; 
+  let r = array.length; 
+  while (l <= r){
+    let num = Math.floor((l+r)/2); 
+    if (target === array[num]){
+      return num; 
+    } else if (target < array[num]) {
+      r = num-1; 
+    } else {
+      l = num+1; 
+    }
+  }
+  return -1; 
+}
