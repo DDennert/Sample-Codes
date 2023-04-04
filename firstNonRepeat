@@ -1,0 +1,10 @@
+function firstNonRepeatingCharacter(string) {
+  const hash = {};
+  for (char of string)
+    hash[char]= (hash[char]||0)+1; 
+
+  for (let ind = 0 ; ind< string.length; ind++)
+    if (hash[string[ind]] === 1 ) return ind; 
+ 
+  return -1;
+}
