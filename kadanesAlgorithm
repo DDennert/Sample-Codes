@@ -1,0 +1,14 @@
+function kadanesAlgorithm(array) {
+  let maxNow = -Infinity; 
+  let currTotal = -Infinity;
+  for(i=0; i< array.length; i++){
+    currTotal = currTotal + array[i]; 
+    if (array[i] > currTotal){
+      currTotal = array[i];
+    }
+    if (maxNow < currTotal){
+      maxNow = currTotal; 
+    }
+  }
+  return maxNow; 
+}
