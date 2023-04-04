@@ -1,0 +1,10 @@
+function arrayOfProducts(array) {
+  let prods = [];
+
+  for (i=0; i< array.length; i++){
+    let currNum = array.shift();
+    let currTot = array.reduce((a,b)=> a*b); 
+    prods[i] = currTot; 
+    array.push(currNum);
+  } return prods; 
+}
