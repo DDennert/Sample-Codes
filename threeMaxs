@@ -1,0 +1,12 @@
+function findThreeLargestNumbers(array) {
+  let ans = [-Infinity, -Infinity, -Infinity]; 
+  for (i=0;i<array.length; i++){
+    let currArr = array[i];
+    ans.sort(function(a, b){return a - b});
+    if (currArr > ans[0]){
+         ans[0]= currArr;
+    }
+  }
+
+  return ans.sort(function(a, b){return a - b});
+}
