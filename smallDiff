@@ -1,0 +1,22 @@
+function smallestDifference(arrayOne, arrayTwo) {
+  arrayOne.sort(function(a, b){return a - b}); // small to big
+  arrayTwo.sort(function(a, b){return a - b});
+  let currDiff = Infinity; // placeHolder for the minDiff
+  let p1  = 0; // pointer for array one
+  let p2 = 0; // pointer for aray 2
+  let ind1 = 0;
+  let ind2 = 0;
+  while (p1 < arrayOne.length && p2 < arrayTwo.length){
+    if (Math.abs(arrayOne[p1]-arrayTwo[p2]) < currDiff){
+      currDiff = Math.abs(arrayOne[p1]-arrayTwo[p2]);
+      ind1 = p1; 
+      ind2 = p2; 
+    }
+    if (arrayOne[p1] < arrayTwo[p2]){
+      p1++; 
+    } else {
+      p2++; 
+    }
+  }
+  return [arrayOne[ind1], arrayTwo[ind2]];
+}
