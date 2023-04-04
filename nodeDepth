@@ -1,0 +1,17 @@
+function nodeDepths(root) {
+   return sumD(root, 0);  
+}
+
+function sumD(node, level){
+  if (!node) return 0; 
+
+  return level + sumD(node.left, level+1) + sumD(node.right, level+1); 
+}
+// This is the class of the input binary tree.
+class BinaryTree {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
