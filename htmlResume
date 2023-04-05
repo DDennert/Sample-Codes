@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		<!--/* Target all H1 headings */-->
+		header, body, footer {
+			background-color: rgb(200, 220,230); 
+		}
+		h1 {
+			font-size: 30px;
+			font-family: serif;
+			text-align: center;
+			font-weight: bold
+		}	
+	
+		/* Target all H2 headings */
+		h2 {
+			font-size: 24px;
+			font-family: serif;
+			text-align: center;
+			font-weight: bold
+		}
+		/* Target all H3 headings */
+		h3 {
+			font-size: 18px;
+			font-family: serif;
+			text-align: center;
+		}
+		
+		/* Target all table headers */
+		th {
+			font-size: 20px;
+			font-family: sans-serif;
+			text-align: center;
+			font-weight: bold
+			margin: auto;
+			border: 1px solid black;
+			padding: 10px;
+		}
+
+		/* Target all table rows */
+		td {
+			font-size: 16px;
+			font-family: sans-serif;
+			text-align: left; 
+			font-weight: normal; 
+			margin: auto;
+			border: 1px solid black;
+			padding: 10px;			
+		}
+		/* Target the bio paragraph */
+		h4 {
+			font-size: 20px; 
+			font-family: sans-serif; 
+			text-align: center; 
+			fontweight: bold; 
+			background-color: #5fffec; 
+			border: 3px solid black; 
+        }
+		}
+		/* Target my Skills Section */
+		.skills { 
+				text-align: center; 
+				fontweight: bold;
+				font-size: 100px;
+				border: 6px solid black;
+				
+		}
+		/* Target Work Experience */
+		.WorkTables {
+			margin: 0 auto; 
+			text-align: center; 
+		}
+		
+	</style>
+	<header id = "header"> <!--Base Information about who I am-->
+		<b><h1 id="Name">DDennert</h1>
+		<div>
+		<h2 id="Address">12345 Street<br/> City, St #####</h2>
+		<div>
+		<h3 id="Contact">Email:  <br/> Phone: </h3><br/>
+	</header>
+	
+	<body id = "body">
+		<div>
+			<h4 id="bio">I am a highly intellegent, hardworking, dedicated aspiring Full Stack Software Engineer with a strong passion for bettering societal norms around 
+						health and well being. I have spent the past decade of my life dedicated to public service having been a member of the US Air Force and 
+						then transistioning to a public educator. I am ready for the transistion back to my true passion, software design, specifically full stack 
+						engineering. I formally studied Computer Science with a focus in Cyber Warfare from the US Air Force Academy which gave me a one of a kind 
+						knowledge into software development, network safety, and internet protocols. I am a unique individual with a combination of intellect, social
+						awareness, progressiveness, and creativity that would be an excellent addition to any software development team.</h4>
+		<div> <table class="skills" id = "skills">		<!-- Table depicting Don's skills in relation to this job title-->
+				<thead>
+					<th colspan="2"><b>Don's Skills</b></th>
+				</thead>
+				
+				<tbody>
+					<ul>
+					<tr>
+						<td><li>Front End Web Design</li></td>
+						<td><li>Back End Web Design</li></td>
+					</tr>
+					<tr>
+						<td><li>Multiple Programming Paradigms</li></td>
+						<td><li>Algorithmic Thinking</li></td>
+					</tr>
+					<tr>
+						<td><li>Advanced Problem Solving</li></td>
+						<td><li>Project Management</li></td>
+					</tr>
+					<tr>
+						<td><li>Quality Control</li></td> <!--You don't say!-->
+						<td><li>Strategic Planning</li></td>
+					</tr>
+					<tr>
+						<td><li>Self Sufficient</li></td>
+						<td><li>Self Motivated</li></td>
+					</tr>
+					</ul>
+				</tbody>
+			  </table>
+		</div>
+		<div class="workexperience">
+			
+				<h2>
+					<b>Work Experience</b>
+				<h2>
+				<div class="WorkTables">
+				<table>
+				<tbody>	
+					<tr id="teaching">
+						<th id="jobtitle" scope="col"><b>Math and Science Teacher</b></th>
+						<th><i>Adams 12 Five Star Schools</i></th>
+						<th><b>August 2018-Current</b></th>
+					</tr>
+					<ul>
+					<tr>
+						<td colspan="3"><li>Taught AP Calculus, L2k(Engineering), Computer Science, Algebra 1/2, Biology, Physics, Geometry, and Trigonomety.                                                                                                                                           .</li></td> <!--Not good code, but flexibility is key-->
+					</tr>
+					<tr> 
+						<td colspan="3"><li>Cyber Patriot HS competition Team Coach, Mathcounts, Computer Science Mentor, Creation of Programmed Exams, Unified Basketball, L2k, and Catan Club                                                                                                          .</li></td>
+					</tr>
+					</ul>
+				</tbody>
+				</table>
+				<table>
+					<tr id="ADM">
+						<th id="jobtitle" scope="col"><b>CEO, CFO, and Coach</b></th>
+						<th><i>Animate Dat Man LLC</i></th>
+						<th><b>February 2020-Current</b></th>
+					</tr>
+					<ul>
+					<tr>
+						<td colspan="3"><li>World Class Competitive Video Game Team                                                                                                                                                                                                                     .</li></td>
+					</tr>
+					<tr>       
+						<td colspan="3"><li>Owner, operator, and former player of our 16 person professional video game team. I solely created the entire website for our team.                                                                                                                          .</li></td>
+					</tr> 
+					</ul>
+				</table>
+				<tbody>
+				<table>
+					<tr id="MHP">
+						<th id="jobtitle" scope="col"><b>Quality Control Associate Engineer</b></th>
+						<th><i>MHP LLC</i></th>
+						<th><b>February-2016-February 2017</b></th>
+					</tr>
+					<ul>
+					<tr>
+						<td colspan="3"><li>Implementation of a full cGMP production facility, programming of full data collection and record keeping, full implementation of programmed calculators using OO programming language, SOP creation. One of top individuals within the production facility .</li></td>
+					</tr>
+					<tr> 
+						<td colspan="3"><li>Accomplishments: Took non-compliant production facility and made proper quality corrections to ensure compliance, created all SOPs and batch records, programmed data collection tools.                                                                     .</li></td>
+					</tr>
+					</ul>
+				</table>
+				</tbody>
+				<tbody>
+				<table>
+					<tr id="Navitas">
+						<th id="jobtitle" scope="col"><b>Engineering Intern</b></th>
+						<th><i>Navitas Land and Mineral LLC</i></th>
+						<th><b>June 2014-August 2014</th>
+					</tr>
+					<ul>
+					<tr>
+						<td colspan="3"><li>Summer Internship with many responsibilities including Reservoir Engineering, Geological Research, Oil Well Mapping, and client interaction.                                                                                                               .</li></td>
+					</tr>
+					<tr> 
+						<td colspan="3"><li>Accomplishments: Investor Presentations for Multi-Million Dollar Project, Completed Project Researching all previous wells in Western Kentucky.                                                                                                            .</li></td>
+					</tr>
+				</table>
+				</tbody>
+				</div>
+		</div>
+		<div>
+				<h2>
+					<b>Certificates + Recognitions</b>
+				</h2>
+				
+				<tbody>
+					
+				</tbody>
+		</div>
+		<div>
+				<h2>
+					<b>Educational Background</b>
+				<h2>
+				
+				<tbody>
+					
+				</tbody>
+		</div>		
+		
+	</body>
+	
+	<footer>
+	</footer>
+</html>
