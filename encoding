@@ -1,0 +1,16 @@
+function runLengthEncoding(string) {
+  let count = 1; 
+  let ans = '';
+  let curr = null; 
+
+  for (i=0; i<string.length;i++){
+    curr = string[i]; 
+    if (curr === string[i+1] && count < 9){
+      count++;
+    } else {
+      ans = `${ans}${count}${curr}`; 
+      count = 1;
+    }
+  }
+  return ans; 
+}
