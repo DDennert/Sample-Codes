@@ -1,0 +1,17 @@
+function selectionSort(array) {
+  for (i=0; i<array.length; i++){
+    let lowest = Infinity; 
+    let lowInd = -1; 
+    for (j=i; j<array.length; j++){
+      if (lowest > array[j]){
+        lowInd = j; 
+        lowest = array[j];
+      }
+    }
+    let temp1 = array[lowInd]; 
+    let temp2 = array [i] 
+    array[lowInd] = temp2; 
+    array[i] = temp1; 
+  }
+  return array; 
+}
